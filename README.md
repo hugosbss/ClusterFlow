@@ -1,24 +1,10 @@
-# ClusterFlow (nome sugerido)
+# ClusterFlow
 
 Simulador visual de cluster para iniciar/parar instancias de apps e distribuir carga entre servidores.
 
 ## Preview do painel
 
 ![Painel do ClusterFlow](./public/Quadro.png)
-
-## Nome recomendado
-
-**ClusterFlow**.
-
-Por que esse nome faz sentido:
-- O projeto gira em torno de **cluster** (servidores e instancias).
-- A aplicacao tem fluxo de **entrada, distribuicao e realocacao** de apps.
-- O nome comunica comportamento, nao apenas interface.
-
-Outras opcoes:
-- `ClusterBalancer` (foco em balanceamento).
-- `AppAllocator` (foco na regra de alocacao).
-- `ServerBoard` (foco visual no quadro de servidores).
 
 ## O que o projeto faz
 
@@ -30,7 +16,7 @@ Painel para:
 
 ## Regras implementadas (analise do codigo)
 
-A logica principal esta na store Pinia [`src/cluster.js`](/home/hugo/Documents/ClusterFlow/src/cluster.js):
+A logica principal esta na store Pinia [`src/cluster.js`]
 
 - Estado inicial:
   - `iniciarCluster()` cria **4 servidores**.
@@ -73,14 +59,7 @@ A logica principal esta na store Pinia [`src/cluster.js`](/home/hugo/Documents/C
 
 ## Estrutura principal
 
-- [`src/cluster.js`](/home/hugo/Documents/ClusterFlow/src/cluster.js): regras de negocio e alocacao.
-- [`src/views/ClusterView.vue`](/home/hugo/Documents/ClusterFlow/src/views/ClusterView.vue): layout, controles e integracao com store.
-- [`src/components/ServerGrid.vue`](/home/hugo/Documents/ClusterFlow/src/components/ServerGrid.vue): grade de servidores.
-- [`src/components/ServerCard.vue`](/home/hugo/Documents/ClusterFlow/src/components/ServerCard.vue): renderizacao das instancias em cada servidor.
-
-## Melhorias recomendadas
-
-- Clonar objeto do app ao alocar (evita compartilhar a mesma referencia e sobrescrever `hora` entre instancias).
-- Exibir feedback quando realocacao falhar ao destruir servidor.
-- Criar testes unitarios para regras de alocacao e realocacao.
-- Extrair regras de capacidade para constantes configuraveis.
+- [`src/cluster.js`]: regras de negocio e alocacao.
+- [`src/views/ClusterView.vue`]: layout, controles e integracao com store.
+- [`src/components/ServerGrid.vue`]: grade de servidores.
+- [`src/components/ServerCard.vue`]: renderizacao das instancias em cada servidor.
