@@ -1,0 +1,57 @@
+@import './base.css';
+
+#app {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  font-weight: normal;
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+  padding: 3px;
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(160, 100%, 37%, 0.2);
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: start;
+  }
+}
+
+.servers {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1rem;
+  width: 100%;
+}
+
+.app-hadoop {
+  background: linear-gradient(135deg, #630052, #ff00cc);
+}
+.app-rails {
+  background: linear-gradient(135deg, #3a00ff, #7a4dff);
+}
+.app-chronos {
+  background: linear-gradient(135deg, #0099ff, #00497a);
+}
+.app-storm {
+  background: linear-gradient(135deg, #00e6b8, #009c75);
+}
+.app-spark {
+  background: linear-gradient(135deg, #4cff00, #257c00);
+}
+
+.mini-btn img {
+  width: 30px;
+  height: 30px;
+}
